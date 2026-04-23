@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://4q180vgijfh3"]
+
+[ext_resource type="PackedScene" uid="uid://20freujtg886" path="res://Mis Assets/Escenas/Player.tscn" id="1_24ji1"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_vh6hs"]
+friction = 8.0
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_vh6hs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7bifp"]
+size = Vector2(0.99787426, 1.065217)
+
+[node name="Game" type="Node2D" unique_id=148121939]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1575141111]
+modulate = Color(1, 0.66725624, 0.9022655, 1)
+position = Vector2(530, 479)
+scale = Vector2(1058.5, 103.5)
+physics_material_override = SubResource("PhysicsMaterial_vh6hs")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1491135524]
+texture = SubResource("PlaceholderTexture2D_vh6hs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1742120671]
+position = Vector2(-0.0001180768, -0.010869503)
+shape = SubResource("RectangleShape2D_7bifp")
+
+[node name="Personaje" parent="." unique_id=1045953160 instance=ExtResource("1_24ji1")]
