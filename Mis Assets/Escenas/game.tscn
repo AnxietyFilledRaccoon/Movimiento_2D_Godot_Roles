@@ -8,22 +8,57 @@ friction = 8.0
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_vh6hs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7bifp"]
-size = Vector2(0.99787426, 1.065217)
+size = Vector2(1.0883325, 0.107488155)
 
 [node name="Game" type="Node2D" unique_id=148121939]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1575141111]
+[node name="Piso" type="StaticBody2D" parent="." unique_id=1575141111]
 modulate = Color(1, 0.66725624, 0.9022655, 1)
-position = Vector2(530, 479)
+position = Vector2(533, 599)
+scale = Vector2(1058.5, 103.5)
+physics_material_override = SubResource("PhysicsMaterial_vh6hs")
+
+[node name="Sprite2D" type="Sprite2D" parent="Piso" unique_id=1491135524]
+position = Vector2(0.039560795, 2.2850242)
+scale = Vector2(1.0866793, 3.7971013)
+texture = SubResource("PlaceholderTexture2D_vh6hs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Piso" unique_id=1742120671]
+position = Vector2(0.039678812, 0.4402175)
+shape = SubResource("RectangleShape2D_7bifp")
+
+[node name="Personaje" parent="." unique_id=1045953160 instance=ExtResource("1_24ji1")]
+position = Vector2(72, 584)
+
+[node name="Piso2" type="StaticBody2D" parent="." unique_id=68302820]
+modulate = Color(1, 0.66725624, 0.9022655, 1)
+position = Vector2(47, 533)
+rotation = 1.5707964
 scale = Vector2(1058.5, 103.5)
 physics_material_override = SubResource("PhysicsMaterial_vh6hs")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1491135524]
+[node name="Sprite2D" type="Sprite2D" parent="Piso2" unique_id=876967993]
+position = Vector2(-0.017075896, 2.4838164)
+scale = Vector2(0.97340596, 4.1946855)
 texture = SubResource("PlaceholderTexture2D_vh6hs")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1742120671]
-position = Vector2(-0.0001180768, -0.010869503)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Piso2" unique_id=1140724955]
+position = Vector2(0.039678812, 0.4402175)
 shape = SubResource("RectangleShape2D_7bifp")
 
-[node name="Personaje" parent="." unique_id=1045953160 instance=ExtResource("1_24ji1")]
+[node name="Piso3" type="StaticBody2D" parent="." unique_id=1232041855]
+modulate = Color(1, 0.66725624, 0.9022655, 1)
+position = Vector2(1627, 535)
+rotation = 1.5707964
+scale = Vector2(1058.5, 103.5)
+physics_material_override = SubResource("PhysicsMaterial_vh6hs")
+
+[node name="Sprite2D" type="Sprite2D" parent="Piso3" unique_id=329148527]
+position = Vector2(-0.017075896, 2.4838164)
+scale = Vector2(0.97340596, 4.1946855)
+texture = SubResource("PlaceholderTexture2D_vh6hs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Piso3" unique_id=293122230]
+position = Vector2(0.041568294, 4.57971)
+shape = SubResource("RectangleShape2D_7bifp")

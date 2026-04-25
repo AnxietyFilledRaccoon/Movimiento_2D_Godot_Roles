@@ -293,4 +293,9 @@ sprite_frames = SubResource("SpriteFrames_yoi1n")
 animation = &"stop_dash"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=801317046]
-zoom = Vector2(2, 2)
+position = Vector2(-10, -4)
+rotation = 1.6179202
+skew = 0.18675023
+zoom = Vector2(6, 6)
+position_smoothing_enabled = true
+position_smoothing_speed = 7.0
